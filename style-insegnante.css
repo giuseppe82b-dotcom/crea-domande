@@ -1,0 +1,114 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f7;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 2em;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 2.5em;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 900px;
+    border: 1px solid #d4e0ea;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    text-align: center;
+    font-weight: 600;
+}
+
+h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+.sezione {
+    margin-bottom: 2em;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5em;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab-btn {
+    flex-grow: 1;
+    padding: 1em;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    /* Stili per i pulsanti non attivi */
+    background-color: #f0f0f0; /* Sfondo grigio chiaro */
+    color: #555; /* Testo grigio scuro */
+}
+
+.tab-btn:hover {
+    background-color: #e0e0e0; /* Sfondo leggermente più scuro al passaggio del mouse */
+    color: #333;
+}
+
+.tab-btn.active {
+    /* Stili per il pulsante attivo (rimane in blu) */
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Ombra per farlo risaltare */
+}
+
+.tab-pane {
+    display: none;
+    padding: 1.5em;
+    border-radius: 10px;
+    transition: background-color 0.5s ease;
+}
+
+/* Colori delle sezioni */
+#aperte.tab-pane.active {
+    background-color: #fce8e8; /* Rosso chiaro */
+}
+
+#multipla.tab-pane.active {
+    background-color: #e8f9f0; /* Verde chiaro */
+}
+
+#verofalso.tab-pane.active {
+    background-color: #e8f0f8; /* Blu chiaro */
+}
+
+#completare.tab-pane.active {
+    background-color: #f8f8e8; /* Giallo chiaro */
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+textarea, input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 1em;
+    margin: 0.5em 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    resize: vertical;
+}
+
+button {
+    background-color: #3498db; /* Blu base */
+    color: white;
+    border: none;
+    padding: 1.2em

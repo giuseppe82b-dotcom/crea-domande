@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea Domande</title>
+    <link rel="stylesheet" href="style-insegnante.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Crea il tuo file di domande</h1>
+        <p>Utilizza le sezioni sottostanti per creare le tue domande.</p>
+
+        <div class="sezione">
+            <h2>Imposta Password</h2>
+            <p>Inserisci una password per proteggere il report degli studenti.</p>
+            <input type="password" id="passwordInput" placeholder="Inserisci la password (opzionale)">
+        </div>
+
+        <div class="tab-buttons">
+            <button class="tab-btn active" data-tab="aperte">Domande Aperte</button>
+            <button class="tab-btn" data-tab="multipla">Risposta Multipla</button>
+            <button class="tab-btn" data-tab="verofalso">Vero o Falso</button>
+            <button class="tab-btn" data-tab="completare">Testo da Completare</button>
+        </div>
+
+        <div class="tab-content">
+            <div id="aperte" class="tab-pane active">
+                <h2>Domande Aperte</h2>
+                <p>Inserisci una domanda per riga. Aggiungi un'immagine se necessario.</p>
+                <div class="domanda-input">
+                    <textarea rows="5" placeholder="Testo della domanda..." class="input-testo-aperta"></textarea>
+                    <div class="media-inputs">
+                        <input type="text" placeholder="URL Immagine" class="input-img-url">
+                    </div>
+                    <button class="aggiungi-domanda-btn" data-type="aperta">Aggiungi Domanda</button>
+                </div>
+                <div id="containerAperte"></div>
+            </div>
+
+            <div id="multipla" class="tab-pane">
+                <h2>Domande a Risposta Multipla</h2>
+                <div id="containerMultipla"></div>
+                <button class="aggiungi-domanda-btn" data-type="multipla">Aggiungi Domanda</button>
+            </div>
+
+            <div id="verofalso" class="tab-pane">
+                <h2>Domande Vero o Falso</h2>
+                <div id="containerVeroFalso"></div>
+                <button class="aggiungi-domanda-btn" data-type="verofalso">Aggiungi Domanda</button>
+            </div>
+
+            <div id="completare" class="tab-pane">
+                <h2>Testo da Completare</h2>
+                <div id="containerCompletare"></div>
+                <button class="aggiungi-domanda-btn" data-type="completare">Aggiungi Testo</button>
+            </div>
+        </div>
+        
+        <button id="scaricaBtn">Scarica domande.txt</button>
+    </div>
+
+    <script src="script-insegnante.js"></script>
+
+</body>
+</html>
